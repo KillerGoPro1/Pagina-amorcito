@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Una flor para mi flor</title>
+    <style>
+        body {
+            margin: 0;
+            background: url('Llanura.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        #message {
+            font-size: 24px;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            text-shadow: 2px 2px 4px #000;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeIn 2s ease-in 3s forwards;
+        }
+
+        #flower-container {
+            width: 200px;
+            height: 200px;
+            background-image: url('flor.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0;
+            animation: bloom 3s ease-in-out 1s forwards;
+        }
+
+        @keyframes bloom {
+            from {
+                transform: scale(0.1);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="message">Una flor para mi flor</div>
+    <div id="flower-container"></div>
+</body>
+</html>
